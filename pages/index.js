@@ -8,9 +8,11 @@ import HomeInstructors from '@/components/Home/HomeInstructors/HomeInstructors'
 import HomeNews from '@/components/Home/HomeNews/HomeNews'
 import HomePlatform from '@/components/Home/HomePlatform/HomePlatform'
 import HomePopularCourses from '@/components/Home/HomePopularCourses/HomePopularCourses'
+import NavBar from '@/components/NavBar/NavBar'
 export default function Home() {
   return (
     <main>
+      <NavBar/>
       <HomeHero />
       <HomeAbout />
       <HomeCategory />
