@@ -1,0 +1,7 @@
+.category h5 {
+  transition: all 0.3s;
+}
+
+.category:hover h5 {
+  color: white;
+}

@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Playball&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Kaushan+Script&family=Playball&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Kaushan+Script&family=Outfit:wght@400;500;600;700;800;900&family=Playball&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap');
+
+body {
+  color: #0E0605;
+  font-family: 'DM Sans', sans-serif ;
+}
+.font-inter{
+  font-family: 'Inter', sans-serif !important;
+}
+.font-outfit{
+font-family: 'Outfit', sans-serif !important;
+}
+
+.kaushan-script-font {
+  font-family: 'Playball', cursive !important;
+}
+.font-work-sans{
+  font-family: 'Work Sans', sans-serif !important;
+}
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: 700;
+}
+h4 {
+  font-size: 24px !important;
+}
+h5 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #0E0605;
+}
+.font-800{
+  font-weight: 800 !important;
+}
+.font-400{
+  font-weight: 400 !important;
+}
+.navBarShadow {
+  box-shadow: 1px 5px 9px 3px #cfcfcf;
+  -webkit-backdrop-filter: blur(5px);
+}
+.shadow-button {
+  box-shadow: 0px 0px 20px 3px #d9d9d98a;
+}
+.home3HeroShadow{
+  box-shadow: 0px 4px 60px rgba(14, 6, 5, 0.08);
+}
+.home3CategoryShadow {
+  box-shadow: 0px 0px 25px 0px #a9a9a959;
+}
+.divider:before {
+  background-color: #1F2148;
+  --tw-bg-opacity: 0.1;
+}
+.divider:after {
+  background-color: #1F2148;
+  --tw-bg-opacity: 0.1;
+}
+.home3HeroSkew{
+  transform: matrix(0.95, -0.32, 0.48, 0.88, 0, 0);
+  filter: drop-shadow(-8.03971px 32.1589px 16.0794px rgba(0, 0, 0, 0.13));
+}
+/* style= {
+    {
+    backgroundSize: '100vw 120vh', backgroundRepeat:'no-repeat', backgroundPosition:'center'
+  }
+} */
+.lineHeight {
+  line-height: 20px !important;
+}
+
+/* .poular-main-card{
+  transition: all .5s;
+    transform-origin: top;
+} */
+.popular-card-hoverStyle {
+  transition: all .3s;
+  transform-origin: bottom;
+  transform: scaleY(0);
+}
+
+/* .popular-card:hover>.poular-main-card{
+
+  transform: scaleY(0);
+  
+} */
+.popular-card:hover>.popular-card-hoverStyle {
+  transform: scaleY(1);
+
+}
+
+.childHoverStyle {
+  transition: all .3s;
+  transform-origin: top;
+  transform: scaleY(0);
+}
+
+.parentHoverStyle:hover .childHoverStyle {
+  transform: scaleY(1);
+}
+
+.submenu {
+  opacity: 0;
+  transition: all .5s;
+}
+
+.submenuParent:hover .submenu {
+  opacity: 1;
+}
+.home2ImageShadow {
+  box-shadow: 45px -45px 1px black;
+}
+.home2Testimonial .swiper-pagination-bullet{
+  background-color: #4732BA !important;
+  width: 72px !important;
+  height: 6px !important;
+  border-radius: 0px !important;
+}
+.home2Testimonial .swiper-pagination-bullet-active{
+    background-color: #4732BA !important;
+      width: 72px !important;
+      height: 6px !important;
+      border-radius: 0px !important;
+}
+.home3Button{
+  visibility:hidden;
+}
+.popular-card{
+    transition: all .5s !important;
+}
+.popular-card:hover>.home3Button{
+visibility: visible;
+}
+.home3Carousel .swiper-pagination-bullet{
+  background-color: #1F2148;
+}
+.home3Carousel .swiper-pagination-bullet-active{
+  background-color: #1F2148;
+}
+.home3OverLay{
+  background: linear-gradient(180deg, rgba(214, 167, 235, 0.15) 0%, #D6A7EB 100%);
+}
+.home3BlogShadow {
+  box-shadow: 0px 0px 13px 0px #d1d1d1;
+}
+.home3NavButton{
+  box-shadow: 0px 4px 60px rgba(14, 6, 5, 0.08);
+}
+/* media query start */
+@media (min-width:1024px) {
+  .backgroundImageStyle {
+    background-image: url('https://i.ibb.co/M7Z8ZHn/Header.png') !important;
+    background-size: 100vw 125vh;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+}
+
+@media (max-width:1023px) {
+  .backgroundImageStyle {
+    background-image: url('https://i.ibb.co/NmX4dnR/BG.png') !important;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+}
+
+/* media query end */
