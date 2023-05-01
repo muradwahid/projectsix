@@ -11,7 +11,7 @@ const logo7 = 'https://i.ibb.co/hRzD470/ph-currency-dollar-bold.png';
 const Home3Category = () => {
   return (
     <div className="w-4/5 mx-auto my-28">
-      <div className="flex items-center gap-2 justify-center font-inter font-[800]">
+      <div className="flex items-center flex-wrap gap-2 justify-center font-inter font-[800]">
         <h2 className="font-[800]">Browse top</h2>
         <div className="relative">
           <img className="absolute z-[-10]" src={shape} alt="" />

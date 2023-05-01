@@ -12,7 +12,7 @@ const Home2Category = () => {
       <div className="w-4/5 mx-auto my-28">
         <p className="uppercase text-primary mb-5">category</p>
         <div className="flex lg:flex-row flex-col lg:gap-32 gap-4">
-          <div className="w-[470px]">
+          <div className="md:w-[470px]">
             <h2 className="leading-[55px]">Online <span className="text-primary">classes for</span> remote learning.</h2>
           </div>
           <div className="w-[380px]">

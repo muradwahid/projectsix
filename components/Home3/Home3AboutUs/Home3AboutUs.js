@@ -8,7 +8,7 @@ const Home3AboutUs = () => {
         <img className="w-full" src={image} alt="" />
       </div>
       <div className='lg:w-[45%]'>
-        <div className="leading-[56px]">
+        <div className="leading-[56px] flex flex-wrap">
           <div className="flex items-center gap-2">
             <h2 className="font-[800]">Over</h2>
             <div className="relative">

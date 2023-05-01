@@ -22,7 +22,7 @@ const Home3Hero = () => {
             <button className="bg-[#1F2148] home3HeroShadow text-white font-semibold font-inter px-8 py-3 rounded-full">Find courses</button>
           </div>
 
-          <div className='flex items-center gap-2 lg:justify-start justify-center mt-12'>
+          <div className='flex items-center flex-wrap gap-2 lg:justify-start justify-center mt-12'>
             <div><img src={logo} alt="" /></div>
             <div className='flex'>
               <AiFillStar className='text-[18px] text-[#F59E0B]' />

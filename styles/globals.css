@@ -74,6 +74,10 @@ h6 {
 .home3CategoryShadow {
   box-shadow: 0px 0px 25px 0px #a9a9a959;
 }
+.aboutCarouselShadow{
+    box-shadow: 0px 0px 15px 0px #a9a9a959;
+    margin: 10px 5px;
+}
 .divider:before {
   background-color: #1F2148;
   --tw-bg-opacity: 0.1;
@@ -172,6 +176,17 @@ visibility: visible;
 .home3NavButton{
   box-shadow: 0px 4px 60px rgba(14, 6, 5, 0.08);
 }
+
+/* about */
+.about-carousel .swiper-pagination-bullet{
+  background-color: #0E0605;
+  opacity: 1;
+}
+.about-carousel .swiper-pagination-bullet-active{
+  background-color: #FF6158;
+}
+/* about */
+
 /* media query start */
 @media (min-width:1024px) {
   .backgroundImageStyle {
@@ -190,6 +205,21 @@ visibility: visible;
     background-position: center;
   }
 
+}
+.swiper-container {
+  width: 480px;
+}
+
+@media screen and (min-width: 640px) {
+  .swiper-container {
+    width: 640px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-container {
+    width: 768px;
+  }
 }
 
 /* media query end */

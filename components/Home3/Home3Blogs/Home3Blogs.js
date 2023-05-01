@@ -12,7 +12,7 @@ const Home3Blogs = () => {
       <img src={shape} className='absolute left-0 bottom-0' alt="" />
       <div className="w-4/5 mx-auto">
         <div className="flex items-center justify-between gap-5 flex-wrap">
-          <div class="flex gap-3">
+          <div class="flex flex-wrap gap-3">
             <h2 class="tracking-[-0.03em] font-inter font-[800]">Our latest</h2>
             <div class="relative">
               <img class="absolute z-[-10] bottom-3" src="https://i.ibb.co/rdwGdyP/Element-5.png" alt="" />
