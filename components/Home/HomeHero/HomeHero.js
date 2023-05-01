@@ -13,9 +13,9 @@ function HomeHero() {
           <div className=' mb-12 flex flex-col lg:items-start items-center justify-center'>
             <p className='leading-7 text-[18px] my-7'>It is long established that a reader will be distracted
               by <br /> thereadable popular and best content.</p>
-            <div className='flex w-[470px] relative'>
+            <div className='flex md:w-[470px] w-4/5 relative'>
               <AiOutlineMail className='absolute top-1/2 translate-y-[-50%] left-5 text-[#0E0605]' />
-              <input className='h-[50px] w-[75%] rounded-l-md pl-11' type="text" name="" placeholder='Enter your mail' id="" />
+              <input className='h-[50px] md:w-[75%] w-full rounded-l-md pl-11' type="text" name="" placeholder='Enter your mail' id="" />
               <button className='bg-primary h-[50px] font-[500] rounded-r-md text-white flex items-center px-4'>Get started</button>
             </div>
           </div>
