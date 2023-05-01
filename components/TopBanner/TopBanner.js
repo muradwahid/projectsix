@@ -4,8 +4,8 @@ const topBanner = ({tittle,path}) => {
   return (
     <div className="h-[360px]" style={{ backgroundImage: `url(${bgImage})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="flex items-center justify-center pt-[180px]">
-        <div>
-          <h2>{tittle}</h2>
+        <div className="w-4/5 mx-auto">
+          <h2 className="text-center">{tittle}</h2>
           <div className="flex gap-3 items-center justify-center">
             <p className="font-medium">Home</p>
             <div className="text-primary flex items-center">
