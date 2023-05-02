@@ -10,7 +10,7 @@ const Home2Instructor = () => {
   return (
     <div className='w-4/5 mx-auto my-[112px] relative'>
       <div className="w-[40px] text-[17px] absolute top-0 -left-12 text-[#BAA299] "><div className="flex gap-1"><span>+</span><span>+</span><span>+</span><span>+</span></div><div className="mt-[-10px] flex gap-1"><span>+</span><span>+</span><span>+</span><span>+</span></div></div>
-      <img src='https://i.ibb.co/V3Fr0xj/Element-1.png' className="absolute -right-24 bottom-0" alt="" />
+      <img src='https://i.ibb.co/V3Fr0xj/Element-1.png' className="absolute -right-24 bottom-0 md:block hidden" alt="" />
       <div className='mb-8 font-outfit'>
         <div className='text-center'>
           <p className='text-[14px] font-bold text-primary uppercase'>our expert instructors</p>

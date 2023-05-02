@@ -31,8 +31,20 @@ const Home2Testimonial = () => {
       
       <Swiper
         modules={[Navigation, Scrollbar, A11y, Autoplay]}
+        // spaceBetween={30}
+        // slidesPerView={3.5}
+        slidesPerView={1}
         spaceBetween={30}
-        slidesPerView={3.5}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 40
+          },
+          768: {
+            slidesPerView: 3.5,
+            spaceBetween: 50
+          }
+        }}
         // direction="horizontal"
         
         reverseDirection= {true}
@@ -165,8 +177,20 @@ const Home2Testimonial = () => {
       </Swiper>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+        // spaceBetween={30}
+        // slidesPerView={3.5}
+        slidesPerView={1}
         spaceBetween={30}
-        slidesPerView={3.5}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 40
+          },
+          768: {
+            slidesPerView: 3.5,
+            spaceBetween: 50
+          }
+        }}
         autoplay={true}
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
