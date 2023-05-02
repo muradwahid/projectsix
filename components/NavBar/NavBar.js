@@ -63,7 +63,16 @@ const NavBar = () => {
                   </div>
                 </div>
               </div>
-              <li className='flex items-center gap-1 cursor-pointer'>Course <GoTriangleDown /></li>
+              <div className='relative submenuParent'>
+                <li className='flex items-center gap-1 cursor-pointer'>Course <GoTriangleDown /></li>
+                <div className='absolute bg-primary w-[150px] overflow-hidden grid top-12 left-[-30px] rounded-b-md submenu'>
+                  <div className='grid'>
+                    <Link className='text-white font-medium text-[14px] px-5 py-3 transition-all duration-200 hover:bg-white hover:text-primary' href='/coursesOne'>Course 1</Link>
+                    <Link className='text-white font-medium text-[14px] px-5 py-3 transition-all duration-200 hover:bg-white hover:text-primary' href='/coursesTwo'>Course 2</Link>
+                    <Link className='text-white font-medium text-[14px] px-5 py-3 transition-all duration-200 hover:bg-white hover:text-primary' href='/courseDetails'>Course Details</Link>
+                  </div>
+                </div>
+              </div>
               <div className='relative submenuParent'>
                 <li className='flex items-center gap-1'>Blog <GoTriangleDown /></li>
                 <div className='absolute bg-primary w-[150px] overflow-hidden grid top-12 left-[-30px] rounded-b-md submenu'>
