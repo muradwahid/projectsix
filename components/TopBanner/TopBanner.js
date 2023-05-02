@@ -1,9 +1,9 @@
 import { BsDot } from "react-icons/bs";
 const bgImage = 'https://i.ibb.co/xhjzvc9/BG-5.png';
-const topBanner = ({tittle,path}) => {
+const topBanner = ({ tittle, path }) => {
   return (
     <div className="h-[360px]" style={{ backgroundImage: `url(${bgImage})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      <div className="flex items-center justify-center pt-[180px]">
+      <div className="flex items-center justify-center md:pt-[180px] pt-[130px]">
         <div className="w-4/5 mx-auto">
           <h2 className="text-center">{tittle}</h2>
           <div className="flex gap-3 items-center justify-center">
@@ -14,7 +14,7 @@ const topBanner = ({tittle,path}) => {
             </div>
           </div>
         </div>
-</div>
+      </div>
     </div>
   );
 };

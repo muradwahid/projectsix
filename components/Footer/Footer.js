@@ -4,7 +4,7 @@ const footerBg = 'https://i.ibb.co/xzX8Hmr/Group-1000001372.png';
 const Footer = () => {
   return (
     <div>
-      <div className='w-[90%] mx-auto rounded-[22px]' style={{ backgroundImage: `url(${footerBg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+      <div className='w-[90%] mx-auto md:rounded-[22px] rounded-[38px]' style={{ backgroundImage: `url(${footerBg})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
         <div className='flex justify-between gap-6 flex-wrap px-12 py-28'>
           <div className='w-[270px]'>
             <div className='flex mb-5'>

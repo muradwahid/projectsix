@@ -81,6 +81,9 @@ h6 {
 .instructorShadow{
       box-shadow: 0px 0px 15px 0px #a9a9a959;
 }
+.blogCardShadow{
+  box-shadow:0px 0px 25px 0px #a9a9a959;
+}
 .divider:before {
   background-color: #1F2148;
   --tw-bg-opacity: 0.1;
@@ -189,7 +192,25 @@ visibility: visible;
   background-color: #FF6158;
 }
 /* about */
-
+  
+.blogList{
+  list-style-type: none;
+}
+.blogList li{
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+}
+.blogList li:before{
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #FF6158;
+  top: 6px;
+  left: -20px;
+}
 /* media query start */
 @media (min-width:1024px) {
   .backgroundImageStyle {
