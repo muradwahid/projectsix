@@ -10,6 +10,9 @@ const Home3Nav = () => {
   const [scrollNav, setScrollNav] = useState(false);
   const [toggle, setToggle] = useState(true);
   const [home, setHome] = useState(false);
+  const [pages, setPages] = useState(false);
+  const [course, setCourse] = useState(false);
+  const [blog, setBlog] = useState(false);
   const menuRef = useRef();
   useEffect(() => {
     let handler = e => {
@@ -54,10 +57,36 @@ const Home3Nav = () => {
                   </div>
                 </div>
               </div>
-              <li className='flex items-center gap-1'>Pages <GoTriangleDown /></li>
-              <li className='flex items-center gap-1'>Course <GoTriangleDown /></li>
-              <li className='flex items-center gap-1'>Blog <GoTriangleDown /></li>
-              <li>Contacts</li>
+              <div className='relative submenuParent'>
+                <li className='flex items-center gap-1 cursor-pointer'>Pages <GoTriangleDown /></li>
+                <div className='absolute bg-primary w-[150px] overflow-hidden grid top-12 left-[-30px] rounded-b-md submenu'>
+                  <div className='grid'>
+                    <Link className='text-white font-medium text-[14px] px-5 py-3 transition-all duration-200 hover:bg-white hover:text-primary' href='/about'>About</Link>
+                    <Link className='text-white font-medium text-[14px] px-5 py-3 transition-all duration-200 hover:bg-white hover:text-primary' href='/instructor'>Instructor</Link>
+                    <Link className='text-white font-medium text-[14px] px-5 py-3 transition-all duration-200 hover:bg-white hover:text-primary' href='/instructorDetails'>Instructor Details</Link>
+                  </div>
+                </div>
+              </div>
+              <div className='relative submenuParent'>
+                <li className='flex items-center gap-1 cursor-pointer'>Course <GoTriangleDown /></li>
+                <div className='absolute bg-primary w-[150px] overflow-hidden grid top-12 left-[-30px] rounded-b-md submenu'>
+                  <div className='grid'>
+                    <Link className='text-white font-medium text-[14px] px-5 py-3 transition-all duration-200 hover:bg-white hover:text-primary' href='/coursesOne'>Course 1</Link>
+                    <Link className='text-white font-medium text-[14px] px-5 py-3 transition-all duration-200 hover:bg-white hover:text-primary' href='/coursesTwo'>Course 2</Link>
+                    <Link className='text-white font-medium text-[14px] px-5 py-3 transition-all duration-200 hover:bg-white hover:text-primary' href='/courseDetails'>Course Details</Link>
+                  </div>
+                </div>
+              </div>
+              <div className='relative submenuParent'>
+                <li className='flex items-center gap-1'>Blog <GoTriangleDown /></li>
+                <div className='absolute bg-primary w-[150px] overflow-hidden grid top-12 left-[-30px] rounded-b-md submenu'>
+                  <div className='grid'>
+                    <Link className='text-white font-medium text-[14px] px-5 py-3 transition-all duration-200 hover:bg-white hover:text-primary' href='/blog'>Blog</Link>
+                    <Link className='text-white font-medium text-[14px] px-5 py-3 transition-all duration-200 hover:bg-white hover:text-primary' href='/blogDetails'>Blog Details</Link>
+                  </div>
+                </div>
+              </div>
+              <li><Link href='/contact'>Contacts</Link></li>
             </ul>
           </div>
         </div>
@@ -72,7 +101,7 @@ const Home3Nav = () => {
           <button className='bg-white py-3 px-8 rounded-full home3NavButton font-inter font-semibold'>Sign up</button>
         </div>
       </div>
-      <div className={`bg-primary absolute h-[90vh] z-50 rounded-r-2xl ${!toggle ? 'block' : 'hidden'}`}>
+      <div className={`bg-primary overflow-x-scroll absolute h-[90vh] z-50 rounded-r-2xl ${!toggle ? 'block' : 'hidden'}`}>
         <div>
           <h5 className='italic pl-8 py-6'>Educarso<span className={`text-primary ${scrollNav && 'text-white'}`}>.</span></h5>
           <ul className='grid font-[500]'>
@@ -84,9 +113,29 @@ const Home3Nav = () => {
                 <Link className='py-2 pl-12 hover:bg-white hover:text-primary' href='/home3'>Home-3</Link>
               </div>
             }
-            <li className='transition-all duration-300 hover:bg-white py-2 pl-8 cursor-pointer hover:text-[#0E0605] pr-20 text-white flex items-center gap-1 justify-between'>Pages <GoTriangleDown /></li>
-            <li className='transition-all duration-300 hover:bg-white py-2 pl-8 cursor-pointer hover:text-[#0E0605] pr-20 text-white flex items-center gap-1 justify-between'>Course <GoTriangleDown /></li>
-            <li className='transition-all duration-300 hover:bg-white py-2 pl-8 cursor-pointer hover:text-[#0E0605] pr-20 text-white flex items-center gap-1 justify-between'>Blog <GoTriangleDown /></li>
+            <li onClick={() => setPages(!pages)} className='transition-all duration-300 hover:bg-white py-2 pl-8 cursor-pointer hover:text-[#0E0605] pr-20 text-white flex items-center gap-1 justify-between'>Pages <GoTriangleDown /></li>
+            {
+              pages && <div className='grid text-white'>
+                <Link className='py-2 pl-12 hover:bg-white hover:text-primary' href='/about'>About</Link>
+                <Link className='py-2 pl-12 hover:bg-white hover:text-primary' href='/instructor'>Instructor</Link>
+                <Link className='py-2 pl-12 hover:bg-white hover:text-primary' href='/instructorDetails'>Instructor Details</Link>
+              </div>
+            }
+            <li onClick={() => setCourse(!course)} className='transition-all duration-300 hover:bg-white py-2 pl-8 cursor-pointer hover:text-[#0E0605] pr-20 text-white flex items-center gap-1 justify-between'>Course <GoTriangleDown /></li>
+            {
+              course && <div className='grid text-white'>
+                <Link className='py-2 pl-12 hover:bg-white hover:text-primary' href='/coursesOne'>Course 1</Link>
+                <Link className='py-2 pl-12 hover:bg-white hover:text-primary' href='/coursesTwo'>Course 2</Link>
+                <Link className='py-2 pl-12 hover:bg-white hover:text-primary' href='/coursesDetails'>Course Details</Link>
+              </div>
+            }
+            <li onClick={() => setBlog(!blog)} className='transition-all duration-300 hover:bg-white py-2 pl-8 cursor-pointer hover:text-[#0E0605] pr-20 text-white flex items-center gap-1 justify-between'>Blog <GoTriangleDown /></li>
+            {
+              blog && <div className='grid text-white'>
+                <Link className='py-2 pl-12 hover:bg-white hover:text-primary' href='/blog'>Blog</Link>
+                <Link className='py-2 pl-12 hover:bg-white hover:text-primary' href='/blogDetails'>Blog Details</Link>
+              </div>
+            }
             <li className='transition-all duration-300 hover:bg-white py-2 pl-8 cursor-pointer hover:text-[#0E0605] pr-20 text-white'>Contacts</li>
           </ul>
         </div>

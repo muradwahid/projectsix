@@ -10,6 +10,9 @@ const NavBar = () => {
   const [scrollNav, setScrollNav] = useState(false);
   const [toggle, setToggle] = useState(true);
   const [home, setHome] = useState(false);
+  const [pages, setPages] = useState(false);
+  const [course, setCourse] = useState(false);
+  const [blog, setBlog] = useState(false);
   const menuRef = useRef();
   useEffect(() => {
     let handler = e => {
@@ -95,7 +98,7 @@ const NavBar = () => {
           <ButtonTypo bg={'bg-black'} text={'text-white'}>Sign up</ButtonTypo>
         </div>
       </div>
-      <div className={`bg-primary absolute h-[90vh] z-50 rounded-r-2xl ${!toggle ? 'block' : 'hidden'}`}>
+      <div className={`bg-primary absolute overflow-x-scroll h-[90vh] z-50 rounded-r-2xl ${!toggle ? 'block' : 'hidden'}`}>
         <div>
           <h5 className='italic pl-8 py-6'>Educarso<span className={`text-primary ${scrollNav && 'text-white'}`}>.</span></h5>
           <ul className='grid font-[500]'>
@@ -107,9 +110,29 @@ const NavBar = () => {
                 <Link className='py-2 pl-12 hover:bg-white hover:text-primary' href='/home3'>Home-3</Link>
               </div>
             }
-            <li className='transition-all duration-300 hover:bg-white py-2 pl-8 cursor-pointer hover:text-[#0E0605] pr-20 text-white flex items-center gap-1 justify-between'>Pages <GoTriangleDown /></li>
-            <li className='transition-all duration-300 hover:bg-white py-2 pl-8 cursor-pointer hover:text-[#0E0605] pr-20 text-white flex items-center gap-1 justify-between'>Course <GoTriangleDown /></li>
-            <li className='transition-all duration-300 hover:bg-white py-2 pl-8 cursor-pointer hover:text-[#0E0605] pr-20 text-white flex items-center gap-1 justify-between'>Blog <GoTriangleDown /></li>
+            <li onClick={()=>setPages(!pages)} className='transition-all duration-300 hover:bg-white py-2 pl-8 cursor-pointer hover:text-[#0E0605] pr-20 text-white flex items-center gap-1 justify-between'>Pages <GoTriangleDown /></li>
+            {
+              pages && <div className='grid text-white'>
+                <Link className='py-2 pl-12 hover:bg-white hover:text-primary' href='/about'>About</Link>
+                <Link className='py-2 pl-12 hover:bg-white hover:text-primary' href='/instructor'>Instructor</Link>
+                <Link className='py-2 pl-12 hover:bg-white hover:text-primary' href='/instructorDetails'>Instructor Details</Link>
+              </div>
+            }
+            <li onClick={()=>setCourse(!course)} className='transition-all duration-300 hover:bg-white py-2 pl-8 cursor-pointer hover:text-[#0E0605] pr-20 text-white flex items-center gap-1 justify-between'>Course <GoTriangleDown /></li>
+            {
+              course && <div className='grid text-white'>
+                <Link className='py-2 pl-12 hover:bg-white hover:text-primary' href='/coursesOne'>Course 1</Link>
+                <Link className='py-2 pl-12 hover:bg-white hover:text-primary' href='/coursesTwo'>Course 2</Link>
+                <Link className='py-2 pl-12 hover:bg-white hover:text-primary' href='/coursesDetails'>Course Details</Link>
+              </div>
+            }
+            <li onClick={()=>setBlog(!blog)} className='transition-all duration-300 hover:bg-white py-2 pl-8 cursor-pointer hover:text-[#0E0605] pr-20 text-white flex items-center gap-1 justify-between'>Blog <GoTriangleDown /></li>
+            {
+              blog && <div className='grid text-white'>
+                <Link className='py-2 pl-12 hover:bg-white hover:text-primary' href='/blog'>Blog</Link>
+                <Link className='py-2 pl-12 hover:bg-white hover:text-primary' href='/blogDetails'>Blog Details</Link>
+              </div>
+            }
             <li className='transition-all duration-300 hover:bg-white py-2 pl-8 cursor-pointer hover:text-[#0E0605] pr-20 text-white'>Contacts</li>
           </ul>
         </div>
