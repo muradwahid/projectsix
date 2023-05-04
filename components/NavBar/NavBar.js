@@ -82,7 +82,7 @@ const NavBar = () => {
                   </div>
                 </div>
               </div>
-              <li>Contacts</li>
+              <li><Link href='/contact'>Contacts</Link></li>
             </ul>
           </div>
         </div>
