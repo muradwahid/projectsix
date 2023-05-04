@@ -44,7 +44,7 @@ const Home2NavBar = () => {
       <div className='w-[80%] mx-auto flex items-center justify-between'>
         <div className='lg:block hidden'>
           <div className='flex items-center gap-6'>
-            <h5 className={`italic `}>Educarso<span className={`text-primary `}>.</span></h5>
+            <h5 className={`italic `}><Link href='/'>Educarso</Link><span className={`text-primary `}>.</span></h5>
             <ul className='flex items-center gap-6 font-[500]'>
               <div className='relative submenuParent'>
                 <Link href='/' className='flex items-center gap-1'>Home <GoTriangleDown /></Link>
@@ -98,7 +98,7 @@ const Home2NavBar = () => {
           <button className='bg-primary text-white py-[10px] px-8 rounded-lg home3NavButton font-inter font-semibold '>Sign up</button>
         </div>
       </div>
-      <div className={`bg-primary absolute h-[90vh] z-50 rounded-r-2xl ${!toggle ? 'block' : 'hidden'}`}>
+      <div className={`bg-primary absolute overflow-x-scroll h-[90vh] z-50 rounded-r-2xl ${!toggle ? 'block' : 'hidden'}`}>
         <div>
           <h5 className='italic pl-8 py-6'>Educarso<span className={`text-primary ${scrollNav && 'text-white'}`}>.</span></h5>
           <ul className='grid font-[500]'>

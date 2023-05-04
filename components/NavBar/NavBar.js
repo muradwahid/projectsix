@@ -44,7 +44,7 @@ const NavBar = () => {
       <div className='w-[80%] mx-auto flex items-center justify-between'>
         <div className='lg:block hidden'>
           <div className='flex items-center gap-6'>
-            <h5 className={`italic `}>Educarso<span className={`text-primary `}>.</span></h5>
+            <h5 className={`italic `}><Link href='/'>Educarso</Link><span className={`text-primary `}>.</span></h5>
             <ul className='flex items-center gap-6 font-[500]'>
               <div className='relative submenuParent'>
                 <Link href='/' className='flex items-center gap-1'>Home <GoTriangleDown /></Link>
