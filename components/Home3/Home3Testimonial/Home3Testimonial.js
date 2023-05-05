@@ -36,8 +36,18 @@ const Home3Testimonial = () => {
         <div className="mt-16 home3Carousel">
           <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+            slidesPerView={1}
             spaceBetween={30}
-            slidesPerView={3}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 40
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 50
+              }
+            }}
             autoplay={true}
             pagination={{ clickable: true }}
             onSwiper={(swiper) => console.log(swiper)}
